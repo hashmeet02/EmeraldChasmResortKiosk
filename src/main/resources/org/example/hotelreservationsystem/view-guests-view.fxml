@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="671.0" style="-fx-background-color: rgba(247, 241, 221, 0.8);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hotelreservationsystem.Controllers.ViewGuestsViewController">
+   <children>
+      <ImageView fitHeight="527.0" fitWidth="559.0" layoutX="72.0" layoutY="-235.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo-design-jewelry-luxury-businesses_720613-4-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="10.0" layoutY="14.0" prefHeight="63.0" prefWidth="652.0" style="-fx-background-color: rgba(247, 241, 221, 0.8);" text="Emerald Chasm Resort" textFill="#c7a9a9" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Eras Medium ITC" size="65.0" />
+         </font>
+      </Label>
+      <Label layoutX="262.0" layoutY="132.0" text="All Guests">
+         <font>
+            <Font name="Eras Medium ITC" size="32.0" />
+         </font>
+      </Label>
+      <TableView fx:id="guestsTable" layoutX="210.0" layoutY="179.0" prefHeight="194.0" prefWidth="451.0">
+        <columns>
+          <TableColumn fx:id="cFName" prefWidth="73.14283752441406" resizable="false" text="First Name" />
+          <TableColumn fx:id="cLName" prefWidth="82.2857666015625" resizable="false" text="Last Name" />
+            <TableColumn fx:id="cAddress" prefWidth="132.5714111328125" resizable="false" text="Address" />
+            <TableColumn fx:id="cPhone" minWidth="0.0" prefWidth="74.28564453125" resizable="false" text="Phone" />
+            <TableColumn fx:id="cEmail" minWidth="0.0" prefWidth="88.0" resizable="false" text="Email" />
+        </columns>
+      </TableView>
+      <Button layoutX="64.0" layoutY="320.0" mnemonicParsing="false" onAction="#onBack" style="-fx-background-color: rgba(65, 51, 5, 0.8);" text="BACK" textFill="#f7f1dd">
+         <font>
+            <Font name="Eras Medium ITC" size="23.0" />
+         </font>
+      </Button>
+      <TextField fx:id="guestSearchText" layoutX="34.0" layoutY="179.0" onAction="#onSearch" prefWidth="149.0" promptText="guest name or phone" />
+   </children>
+</AnchorPane>

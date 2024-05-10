@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="671.0" style="-fx-background-color: rgba(247, 241, 221, 0.8);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hotelreservationsystem.Controllers.GuestDetailsViewController">
+   <children>
+      <ImageView fitHeight="527.0" fitWidth="559.0" layoutX="72.0" layoutY="-235.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo-design-jewelry-luxury-businesses_720613-4-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="10.0" layoutY="14.0" prefHeight="63.0" prefWidth="652.0" style="-fx-background-color: rgba(247, 241, 221, 0.8);" text="Emerald Chasm Resort" textFill="#c7a9a9" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Eras Medium ITC" size="65.0" />
+         </font>
+      </Label>
+      <Label layoutX="222.0" layoutY="145.0" text="GUEST DETAILS">
+         <font>
+            <Font name="Eras Medium ITC" size="32.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="173.0" layoutY="187.0" prefHeight="181.0" prefWidth="406.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.28567940848214" minWidth="10.0" prefWidth="156.5714547293527" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="312.7142333984375" minWidth="10.0" prefWidth="250.2856881277902" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="42.0" prefWidth="118.0" text="First Name:" textFill="#413305" wrapText="true" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="85.0" prefWidth="167.0" text="Last Name:" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="85.0" prefWidth="167.0" text="Address:" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="85.0" prefWidth="167.0" text="Phone:" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="85.0" prefWidth="167.0" text="Email:" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="firstNameTxt" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="lastNameTxt" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="addressText" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="phoneTxt" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="emailTxt" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="110.0" layoutY="381.0" prefHeight="43.0" prefWidth="439.0">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#OnConfirmBooking" style="-fx-background-color: rgba(65, 51, 5, 0.8);" text="Confirm Booking" textFill="#f7f1dd">
+               <font>
+                  <Font name="Eras Medium ITC" size="23.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onBack" style="-fx-background-color: rgba(65, 51, 5, 0.8);" text="Back" textFill="#f7f1dd">
+               <font>
+                  <Font name="Eras Medium ITC" size="23.0" />
+               </font>
+            </Button>
+         </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="671.0" style="-fx-background-color: rgba(247, 241, 221, 0.8);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hotelreservationsystem.Controllers.BookRoomsViewController">
+   <children>
+      <ImageView fitHeight="527.0" fitWidth="559.0" layoutX="72.0" layoutY="-235.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo-design-jewelry-luxury-businesses_720613-4-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="10.0" layoutY="14.0" prefHeight="63.0" prefWidth="652.0" style="-fx-background-color: rgba(247, 241, 221, 0.8);" text="Emerald Chasm Resort" textFill="#c7a9a9" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Eras Medium ITC" size="65.0" />
+         </font>
+      </Label>
+      <Label layoutX="231.0" layoutY="146.0" text="BOOK ROOMS">
+         <font>
+            <Font name="Eras Medium ITC" size="32.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="152.0" layoutY="196.0" prefHeight="163.0" prefWidth="445.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.57147216796875" minWidth="10.0" prefWidth="184.71429443359375" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="312.7142333984375" minWidth="10.0" prefWidth="261.28570556640625" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="42.0" prefWidth="118.0" text="No. of Guests:" textFill="#413305" wrapText="true" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <Slider fx:id="numGuestSlider" blockIncrement="1.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label prefHeight="85.0" prefWidth="167.0" text="No. of Days:" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numDaysTxt" maxWidth="40.0" minHeight="-Infinity" minWidth="40.0" prefWidth="40.0" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="85.0" prefWidth="167.0" text="No. of Rooms:" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numRoomsTxt" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label prefHeight="85.0" prefWidth="167.0" text="Date:" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="datePicker" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="104.0" layoutY="379.0" prefHeight="43.0" prefWidth="430.0">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#onSelectRooms" style="-fx-background-color: rgba(65, 51, 5, 0.8);" text="SELECT ROOMS" textFill="#f7f1dd">
+               <font>
+                  <Font name="Eras Medium ITC" size="23.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onHome" style="-fx-background-color: rgba(65, 51, 5, 0.8);" text="HOME" textFill="#f7f1dd">
+               <font>
+                  <Font name="Eras Medium ITC" size="23.0" />
+               </font>
+            </Button>
+         </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

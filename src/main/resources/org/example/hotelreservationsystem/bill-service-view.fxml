@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="671.0" style="-fx-background-color: rgba(247, 241, 221, 0.8);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hotelreservationsystem.Controllers.BillServiceViewController">
+   <children>
+      <ImageView fitHeight="527.0" fitWidth="559.0" layoutX="72.0" layoutY="-235.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo-design-jewelry-luxury-businesses_720613-4-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="10.0" layoutY="14.0" prefHeight="63.0" prefWidth="652.0" style="-fx-background-color: rgba(247, 241, 221, 0.8);" text="Emerald Chasm Resort" textFill="#c7a9a9" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Eras Medium ITC" size="65.0" />
+         </font>
+      </Label>
+      <Label layoutX="243.0" layoutY="140.0" text="BILL SERVICE">
+         <font>
+            <Font name="Eras Medium ITC" size="32.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="68.0" layoutY="197.0" prefHeight="343.0" prefWidth="535.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="289.1428985595703" minWidth="10.0" prefWidth="211.4285648890904" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="448.5714263916016" minWidth="10.0" prefWidth="422.28572082519537" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+          <RowConstraints maxHeight="50.000008719308035" minHeight="10.0" prefHeight="31.571428571428573" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="64.57143729073661" minHeight="10.0" prefHeight="31.285731724330358" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="78.14283098493304" minHeight="10.0" prefHeight="33.99997384207589" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="202.85715157645092" minHeight="10.0" prefHeight="152.4286150251116" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="88.57141985212053" minHeight="10.0" prefHeight="45.57138497488839" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="88.57141985212053" minHeight="10.0" prefHeight="46.57144601004467" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="42.0" prefWidth="118.0" text="Booking ID:" textFill="#413305" wrapText="true" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="85.0" prefWidth="167.0" text="Date:" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="85.0" prefWidth="167.0" text="Guest Name:" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="guestNameLbl" alignment="CENTER" prefHeight="42.0" prefWidth="177.0" text="-" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="85.0" prefWidth="167.0" text="Rooms Booked:" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="bookedRoomsTab" maxWidth="363.0" prefHeight="157.0" prefWidth="363.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+              <columns>
+                <TableColumn fx:id="cRoomId" prefWidth="120.0" text="Room Id" />
+                <TableColumn fx:id="cRoomType" prefWidth="120.0" text="Room Type" />
+                  <TableColumn fx:id="cRoomRate" minWidth="0.0" prefWidth="120.0" text="Rate" />
+              </columns>
+            </TableView>
+            <Label fx:id="dateLbl" alignment="CENTER" prefHeight="42.0" prefWidth="177.0" text="-" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="85.0" prefWidth="167.0" text="Discount:" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="37.0" prefWidth="407.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <TextField fx:id="discountText" layoutY="10.0" maxWidth="40.0" minHeight="-Infinity" minWidth="40.0" prefWidth="40.0" />
+                  <Label layoutX="53.0" layoutY="10.0" prefHeight="25.0" prefWidth="27.0" text="\%" textAlignment="CENTER" textFill="#413305" wrapText="true">
+                     <font>
+                        <Font name="Eras Medium ITC" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="addDiscountBtn" layoutX="209.0" layoutY="5.0" mnemonicParsing="false" onAction="#onAddDiscount" prefHeight="14.0" prefWidth="156.0" style="-fx-background-color: rgba(65, 51, 5, 0.8);" text="ADD DISCOUNT" textFill="#f7f1dd">
+                     <font>
+                        <Font name="Eras Medium ITC" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Label prefHeight="85.0" prefWidth="167.0" text="Total / night:" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalPerNightLbl" alignment="CENTER" prefHeight="42.0" prefWidth="177.0" text="-" textAlignment="CENTER" textFill="#413305" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <TextField fx:id="bookIdText" layoutX="-6.0" layoutY="5.0" maxWidth="40.0" minHeight="-Infinity" minWidth="40.0" prefWidth="40.0" />
+                  <Button layoutX="277.0" layoutY="-3.0" mnemonicParsing="false" onAction="#onSearch" style="-fx-background-color: rgba(65, 51, 5, 0.8);" text="SEARCH" textFill="#f7f1dd">
+                     <font>
+                        <Font name="Eras Medium ITC" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="152.0" layoutY="541.0" prefHeight="60.0" prefWidth="340.0">
+        <buttons>
+            <Button mnemonicParsing="false" onAction="#onClose" style="-fx-background-color: rgba(65, 51, 5, 0.8);" text="CLOSE" textFill="#f7f1dd">
+               <font>
+                  <Font name="Eras Medium ITC" size="23.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onClear" style="-fx-background-color: rgba(65, 51, 5, 0.8);" text="CLEAR" textFill="#f7f1dd">
+               <font>
+                  <Font name="Eras Medium ITC" size="23.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onBack" style="-fx-background-color: rgba(65, 51, 5, 0.8);" text="BACK" textFill="#f7f1dd">
+               <font>
+                  <Font name="Eras Medium ITC" size="23.0" />
+               </font>
+            </Button>
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

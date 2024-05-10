@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="671.0" style="-fx-background-color: rgba(247, 241, 221, 0.8);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hotelreservationsystem.Controllers.MainViewController">
+   <children>
+      <ImageView fitHeight="527.0" fitWidth="559.0" layoutX="71.0" layoutY="-66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo-design-jewelry-luxury-businesses_720613-4-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="240.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to" textAlignment="CENTER" wrappingWidth="191.38946533203125">
+         <font>
+            <Font name="Eras Medium ITC" size="32.0" />
+         </font>
+      </Text>
+      <Label layoutX="7.0" layoutY="126.0" prefHeight="101.0" prefWidth="657.0" style="-fx-background-color: rgba(247, 241, 221, 0.8);" text="Emerald Chasm Resort" textFill="#c7a9a9" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Eras Medium ITC" size="65.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="122.0" layoutY="331.0" prefHeight="43.0" prefWidth="399.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#openBookRoomsView" prefHeight="41.0" prefWidth="165.0" style="-fx-background-color: rgba(65, 51, 5, 0.8);" text="BOOK ROOM" textFill="#f7f1dd">
+               <font>
+                  <Font name="Eras Medium ITC" size="23.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#openLoginView" style="-fx-background-color: rgba(65, 51, 5, 0.8);" text="ADMIN LOGIN" textFill="#f7f1dd">
+               <font>
+                  <Font name="Eras Medium ITC" size="23.0" />
+               </font>
+            </Button>
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
