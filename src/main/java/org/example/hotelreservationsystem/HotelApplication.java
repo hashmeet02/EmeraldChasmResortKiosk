@@ -1,15 +1,3 @@
-/**********************************************
- Workshop 4and5
- Course:APD - 545
- Last Name:SAINI
- First Name:HASHMEET SINGH
- ID:153070214
- Section: NAA
- This assignment represents my own work in accordance with Seneca Academic Policy.
- Signature
- Date:March 20th 2024
- **********************************************/
-
 /************ STEP-2 ***********/
 // To successfully run the application please run the HotelServer.java file and then proceed to run the
 // HotelApplication file. For admin access login using "admin1", "password1" or "admin2", "password2" combinations.
